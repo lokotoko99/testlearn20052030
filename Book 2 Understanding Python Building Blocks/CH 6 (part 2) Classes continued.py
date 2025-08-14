@@ -18,8 +18,10 @@ class Member:
 
         # Default date_joined to today's date.
         self.date_joined = dt.date.today()
-        # Set is_active to True intially.
+        # Set is_active to True intially. which is also defaulted
         self.is_active = True
+
+    
 
 # The class ends at the first un-indented line.
 
