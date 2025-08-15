@@ -2,7 +2,10 @@
 import datetime as dt
 
 #Define a new class name Member for making member objects.
+
 class Member:
+    """Create a member object """
+    free_days = 90
     """ Create a member from uname and fname"""
     def __init__(self, user_name, full_name):
         # Define attributes and give them values
@@ -34,8 +37,14 @@ new_guy = Member('Rambo', 'Rocco Moe')
 # See the date the new guy joined
 print(new_guy.show_date_joined())
 
+#Calling a class method by class name
+print(Member.show_date_joined(new_guy))
+
 print(new_guy.is_active)
 
 new_guy.set_is_active(False)
 
 print(new_guy.is_active)
+
+# Calling a class method by class name
+
