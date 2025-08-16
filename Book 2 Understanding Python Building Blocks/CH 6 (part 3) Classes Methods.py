@@ -6,7 +6,6 @@ import datetime as dt
 class Member:
     """Create a member object """
     free_days = 90
-    """ Create a member from uname and fname"""
     def __init__(self, user_name, full_name):
         # Define attributes and give them values
         self.user_name = user_name
