@@ -9,7 +9,7 @@ def sorter(*args):
     #Create a list from the passed-in tuple.
     newlist = list(args)
     # Sort and show the list.
-    newlist.sort() #(key=lambda s: s.lower)
+    newlist.sort() #(key=lambda s: s.lower())
     print(newlist)
 
 sorter(500,200,100,50,777,0.8)
