@@ -11,8 +11,8 @@ try:
     print(the_file.wookems())
 except FileNotFoundError:
     print("Sorry, I don't see a file named peoplefinal.csv here")
-except Exception as xa:
-    print(xa)
+except Exception as err:
+    print(err)
     print("Sorry, something else is wrong")
 """
 Traceback (most recent call last):
