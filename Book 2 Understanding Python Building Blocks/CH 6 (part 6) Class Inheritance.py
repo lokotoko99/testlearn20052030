@@ -20,6 +20,17 @@ class Member:
         self.last_name = last_name
         # Calculate expiry date today's date.
         self.expiry_date = dt.date.today() + dt.timedelta(days = self.expiry_days)
+        # Default secret code is nothing
+        self.secret_code =""
+
+    # Method in the base class.
+    def show_expiry(self):
+        return f"{self.first_name} {self.last_name} expires on {self.expiry_date}"
+    
+    def get_status(self):
+        return f"{self.first_name} is a Member"
+    
+
 
 joe = Member('Joe','Anybody')
 print(joe.first_name)
@@ -31,21 +42,45 @@ print(joe.expiry_date)
 # Subclass for Admins.
 class Admin(Member):
     # Admin accounts don't expire for 100 years.
-    expiry_days = 365.2422 *100
-    pass
+    expiry_days = 365.2422 * 100
+    def __init__(self,first_name, last_name,secret_code):
+        # any paramters that belogn to blass class Member need to be set up super() reference to parent class(superclass) 
+        # treats the current object as thought it from made from parent class
+        # Pass the Member parameters up to Member class.
+        super().__init__(first_name,last_name)
+        # Assign the remaining parameters to this Admin object.
+        self.secret_code = secret_code
 
+    #method inside a subclass will overpower the one in the baseclass if same name
+    def get_status(self):
+        return f"{self.first_name} is a Admin"
+    
 # Subclass for Users
 class User(Member):
-    pass
+
+    #method inside a subclass will overpower the one in the baseclass if same name
+    def get_status(self):
+        return f"{self.first_name} is a Regular User"
+    
 
 # Outside the class now.
-ann = Admin('Annie','Angst')
+ann = Admin('Annie','Angst','PRESTO')
 print(ann.first_name)
 print(ann.last_name)
 print(ann.expiry_date)
-print()
+print(ann.secret_code)
+print(ann.show_expiry())
+print(ann.get_status())
+print(Admin.__dict__)
+
+
 
 uli = User('Uli','Ungula')
 print(uli.first_name)
 print(uli.last_name)
 print(uli.expiry_date)
+print(uli.secret_code)
+print(uli.show_expiry())
+print(uli.get_status())
+
+# help(Admin)
