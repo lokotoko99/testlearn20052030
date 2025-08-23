@@ -9,7 +9,7 @@ with open('quotes.txt') as f:
     print(filecontents)
 
 
-# Returns as a string
+# Returns as a stringg
 with open('quotes.txt') as f:
     filecontents = f.readline()
     print(filecontents)    
