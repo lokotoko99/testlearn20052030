@@ -23,9 +23,9 @@ class Member:
     method different from a function is the fact that a method is always associated
     with some class. So a method is not as generic as a function."""
     # Method to activate (True) or deactivate (False) account. (Passing parameters to methods)
-    def set_is_active(self, yesno):
+    def set_is_active(self, input):
         """ True for active, False to make inactive"""
-        self.is_active = yesno
+        self.is_active = input
 
     
 # The class ends at the first un-indented line.

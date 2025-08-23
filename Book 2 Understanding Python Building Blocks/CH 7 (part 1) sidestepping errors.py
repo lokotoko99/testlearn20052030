@@ -25,7 +25,7 @@ FileNotFoundError: [Errno 2] No such file or directory: 'peoplefinasl.csv'
 """
 Again, if you’re thinking about handling the .wookems error, that’s not an
 exception for which you’d write an exception handler. Exceptions occur when
-something outside the program upon which the program depends isn’t available.
+something outside the program upon which the program depends on isn’t available.
 Programming errors, such as nonexistent method names, are errors inside the
 program and have to be corrected there by the programmer who wrote the code.
 """

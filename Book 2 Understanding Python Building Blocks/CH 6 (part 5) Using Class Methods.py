@@ -23,7 +23,7 @@ class Member:
         # Set an expiration date.
         self.free_expires = dt.date.today() + dt.timedelta(Member.free_days)
 
-    # a @ is somehting that alter sor extends the functionality of that to which it is applied
+    # a @ is something that alters or extends the functionality of that to which it is applied
     # cls is a reference to class as a whole
     
     @classmethod 
@@ -33,4 +33,14 @@ class Member:
     @staticmethod
     def current_time():
         now = dt.datetime.now()
-        return f"{now:%I%M %p}"
+        return f"{now:%I:%M %p}"
+
+Member.set_free_days(90)
+
+wilbur = Member('wblomgren', 'Wilbur Blomgren')
+
+print(wilbur.date_joined)
+
+print(wilbur.free_expires)
+
+print(wilbur.current_time())

@@ -44,7 +44,7 @@ class Admin(Member):
     # Admin accounts don't expire for 100 years.
     expiry_days = 365.2422 * 100
     def __init__(self,first_name, last_name,secret_code):
-        # any paramters that belogn to blass class Member need to be set up super() reference to parent class(superclass) 
+        # any parameters that belong to the base class Member need to be set up super() reference to parent class(superclass) 
         # treats the current object as thought it from made from parent class
         # Pass the Member parameters up to Member class.
         super().__init__(first_name,last_name)

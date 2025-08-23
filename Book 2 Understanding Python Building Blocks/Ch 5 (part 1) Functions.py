@@ -16,7 +16,7 @@ hello('Alan','Simpson','12/31/2024')
 
 # Remember what ever paramter you want options has to be last in the function
 def hello2(fname, lname, datestring=''):
-    """ Hello first name and alst name"""
+    """ Hello first name and last name"""
     msg = 'Hello ' + fname + ' ' +lname
     if len(datestring) > 0:
         msg += ' The date is ' + datestring

@@ -14,7 +14,6 @@ def lowercaseof(anystring):
 
 print(lowercaseof(names))
 
-print(lowercaseof(names))
 
 def LOWERCASE(anystring):
     return anystring.lower()

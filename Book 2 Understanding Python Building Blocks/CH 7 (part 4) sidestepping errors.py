@@ -14,6 +14,7 @@ try:
     # If there are fewer than 2 lines. raise exception.
     if line_count < 2:
         raise CustomException('Not enough rows!')
+
 # Handles missing file rror.
 except FileNotFoundError:
     print('\nThere is no peoplefinal.csv file here')
