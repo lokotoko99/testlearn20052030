@@ -27,4 +27,33 @@ with open('quotes.txt') as f:
             print(one_line[1], end='')
         # Otherwise print a couple spaces and an extra newline.
         else:
-            print(' ' + one_line[1])
+            print('>' + one_line[1])
+
+with open('quotes.txt') as f:
+    for tup in enumerate(f.readlines()):
+        print(tup)
+
+with open('quotes.txt') as f:
+    one_line = f.readline()
+    while one_line:
+        print(one_line, end ='')
+        one_line = f.readline()
+
+# Store a number to use as a loop counter.
+counter = 1
+# Open the file.
+with open('quotes.txt') as f:
+    # Read one line from the file.
+    one_line = f.readline()
+    # as long as there are lines to read. . .
+    while one_line:
+        # If the counter is an even number, print a couple spaces.
+        if counter % 2 == 0:
+            print(' ' + one_line)
+        # Otherwise print with no newline at the end.
+        else:
+            print(one_line, end ='')
+        # Increment the counter
+        counter += 1
+        # Read the next line.
+        one_line = f.readline()
