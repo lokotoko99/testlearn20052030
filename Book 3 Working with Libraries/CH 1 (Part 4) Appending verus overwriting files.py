@@ -15,7 +15,7 @@ with open('names.txt', encoding ='utf-8') as f:
     one_line = f.readline()
     # Keep reading one line at a time until there are no more.
     while one_line:
-        print(one_line[:-1], f.tell())
+        print(one_line[:-1], f.tell()) # the -1 is to remove the \n lines
         one_line = f.readline()
 
 with open('names.txt', encoding ='utf-8') as f:
@@ -24,3 +24,6 @@ with open('names.txt', encoding ='utf-8') as f:
     # Keep reading one line at a time until there are no more.
     for one_line in f.readlines():
         print(one_line[:-1], f.tell())
+
+# Moving the pointer with seek()   
+# file.seek(position[,whence])

@@ -6,11 +6,14 @@ class CustomException(Exception):
 # A variable that starts out False.
 file_is_open = False
 
+
+
 try:
     # Open the file named people.csv
     the_file = open("test.csv")
     # Count the number of lines in file.
     line_count = len(the_file.readlines())
+    print(f"Line count: {line_count}")
     # If there are fewer than 2 lines. raise exception.
     if line_count < 2:
         raise CustomException('Not enough rows!')
@@ -18,6 +21,10 @@ try:
 # Handles missing file rror.
 except FileNotFoundError:
     print('\nThere is no peoplefinal.csv file here')
+
+# Handles the custom exception (if any)
+except CustomException as ce:
+    print(f"\nCustom Exception: {ce}")
 
 # Handles all other exceptions
 except Exception as e:

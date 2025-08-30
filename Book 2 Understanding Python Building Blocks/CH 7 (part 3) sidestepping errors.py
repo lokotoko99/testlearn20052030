@@ -12,7 +12,7 @@ do this code no matter what happened above
 
 """
 
-# A variable that stars out False.
+# A variable that starts out False.
 
 file_is_open = False
 

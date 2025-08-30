@@ -19,6 +19,10 @@ Document: .pdf, .docx, .xlsx
 """
 
 """
+
+open(filename.ext[,mode])
+
+
 »»  r:(Read): Opens the file but does not allow Python to make any changes. This
 is the default mode and is used if you don’t specify a mode. If the file doesn’t
 exist, Python raises a FileNotFoundError exception.

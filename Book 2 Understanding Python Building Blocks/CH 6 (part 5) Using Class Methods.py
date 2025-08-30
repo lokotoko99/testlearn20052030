@@ -21,7 +21,7 @@ class Member:
         self.full_name = full_name
         self.date_joined = dt.date.today()
         # Set an expiration date.
-        self.free_expires = dt.date.today() + dt.timedelta(Member.free_days)
+        self.free_expires = dt.date.today() + dt.timedelta(Member.free_days) # you can also use self.free_days
 
     # a @ is something that alters or extends the functionality of that to which it is applied
     # cls is a reference to class as a whole

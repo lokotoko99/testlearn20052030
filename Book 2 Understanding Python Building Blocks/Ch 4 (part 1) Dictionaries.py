@@ -63,7 +63,7 @@ for x in peoplex.values():
     print(x)
 
 for x,y in peoplex.items():
-    print(x,y)
+    print(x + "--" + y)
 
 
 """

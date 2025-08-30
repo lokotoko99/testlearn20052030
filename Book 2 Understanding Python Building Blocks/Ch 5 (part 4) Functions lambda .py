@@ -37,7 +37,7 @@ print(currency((99)))
 
 # Show number in currency format.
 def currency2 (n, w = 15):
-    """Show in currency fomrat, width = 15 or width of your choosing"""
+    """Show in currency format, width = 15 or width of your choosing"""
     s = f"${n:,.2f}"
     # Pad left of output with spaces to width of w.
     return s.rjust(w)

@@ -36,6 +36,7 @@ joe = Member('Joe','Anybody')
 print(joe.first_name)
 print(joe.last_name)
 print(joe.expiry_date)
+print(joe.get_status())
 
 # Defining a subclass
 

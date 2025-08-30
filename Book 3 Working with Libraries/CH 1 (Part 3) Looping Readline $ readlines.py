@@ -33,10 +33,14 @@ with open('quotes.txt') as f:
     for tup in enumerate(f.readlines()):
         print(tup)
 
+
+"""The while loop continues as long as one_line contains something (i.e., it's not an empty string '').
+As long as there are more lines in the file, one_line will contain those lines, and the loop will run."""
+
 with open('quotes.txt') as f:
     one_line = f.readline()
     while one_line:
-        print(one_line, end ='')
+        print(one_line, end ='') # with end = '' print doesn't add a new line
         one_line = f.readline()
 
 # Store a number to use as a loop counter.
