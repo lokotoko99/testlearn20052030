@@ -51,6 +51,8 @@ print('Done!')
 
 # Converting to date
 
+#----------------------------------------------------------------------------------------------------------------------------
+
 import datetime as dt
 
 with open('namedata.csv', encoding = 'utf-8', newline ='') as f:
@@ -78,7 +80,7 @@ with open('namedata.csv', encoding = 'utf-8', newline ='') as f:
                 date_joined = None # None is python's word for an empty object.
 
 
-                        #if row[3] == 'TRUE':
+            #if row[3] == 'TRUE':
                 #is_active = True
             #else:
                 #is_active = False
