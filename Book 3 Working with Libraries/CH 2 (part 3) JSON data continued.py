@@ -86,3 +86,13 @@ for k, v in hits.items():
 # now look at the lastvisit date int he hits dictionary.
 for k, v in hits.items():
     print(k,v)
+
+
+# Looping is done, copy new dictionary to JSON string.
+new_dict = json.dumps(hits, indent =2, ensure_ascii = False, sort_keys=True)
+print(new_dict)
+
+with open('hitcounts_new.json', 'w', encoding ='utf-8') as out_file:
+    json.dump(hits, out_file, ensure_ascii=False, sort_keys=True)
+
+print('Done')

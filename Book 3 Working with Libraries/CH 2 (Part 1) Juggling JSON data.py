@@ -2,7 +2,7 @@
 - are equivalent of a data dicitonary in Python
 
 -Serialization: Process of converting an object (such as a Python dictionary) into a  
-                stream of byes or characters that can be sent across a wire
+                stream of bytes or characters that can be sent across a wire
 
 -Deserialization: Converting information back to an object
 

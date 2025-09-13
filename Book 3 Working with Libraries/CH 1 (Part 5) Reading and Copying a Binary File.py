@@ -17,5 +17,6 @@ with open(file_to_copy, 'rb') as original_file:
             # Make sure you read the next chunk in this loop.
             chunk = original_file.read(4096)
 
+
 # Close is automatic after loops, show done message.
 print('Done!')

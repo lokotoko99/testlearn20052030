@@ -1,3 +1,5 @@
+# side note For JSON DATE: JSON enclosed in {} is a object  AND JSON enclsoed in [] is a array.
+
 import json, xlrd
 import datetime as dt
 # This is the Excel data (no keys)
@@ -11,7 +13,7 @@ for p in people:
     name = p['Full Name']
     byear = p['Birth Year']
     # Excel date pretty tricky, use xlrd module.
-    y, m, d, h, i, s = xlrd.xldate_as_tuple(p['Date Joined'], 0)
+    y, m, d, h, i, s, = xlrd.xldate_as_tuple(p['Date Joined'], 0)
     joined = dt.date(y, m, d)
     balance = '$' + f"{p['Balance']:,.2f}"
     print(f"{name:<22} {byear} {joined:%m/%d/%Y} {balance:>12}")
@@ -28,9 +30,13 @@ with open(filename, 'r', encoding='utf-8', newline='') as f:
 print(type(hits))    
 
 for k, v in hits.items():
-    key = k
+    
+    key = k # extra not needed.
     count = v['count']
     last_visit = dt.datetime.utcfromtimestamp(v['lastvisit'] / 1000).date()
     page = v['page']
     came_from = v['lastreferrer']
-    print(f"{count} {last_visit: %m/%d/%Y} {page:<28} {came_from}")
+
+#print(hits["-LA0gAyxxHrPw6pGXBMz"])
+
+

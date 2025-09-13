@@ -76,11 +76,14 @@ with open('namedata.csv', encoding = 'utf-8', newline ='') as f:
 # when the above loop is done, show all objects int he people list. 
     for person in people.keys():
         id = person
-        print(id,people[person]['first_name'],
+        print(id,
+              people[person]['first_name'],
               people[person]['last_name'],
               people[person]['last_name'],
               people[person]['birth_year'],
               people[person]['date_joined'],
               people[person]['is_active'],
               people[person]['balance'])
+
+print(people[8]['first_name'])
               

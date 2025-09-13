@@ -28,7 +28,7 @@ with open('namedata.csv', encoding = 'utf-8', newline ='') as f:
                 first_name = full_name[1].strip()
                 print(first_name, last_name)
             except IndexError:
-                full_name = last_name = first_name = ""
+                full_name = last_name = first_name = ""      
             print(first_name, last_name)
 print('Done!')
 
