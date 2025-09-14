@@ -65,3 +65,5 @@ for tag in soup.find_all(True):  # True means all tags
     tag_counts[tag_name] = tag_counts.get(tag_name, 0) + 1
 
 """
+
+
